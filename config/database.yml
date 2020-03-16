@@ -22,6 +22,4 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
-  database: db/production.sqlite3
-  pool: 5
+  url: <%= ENV.fetch("IDEAS_CONN_STR") %>
